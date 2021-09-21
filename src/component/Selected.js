@@ -14,12 +14,11 @@ const Selected = () => {
       .get(`https://restcountries.eu/rest/v2/name/${name}`)
       .then((res) => {
         setSelect(res.data);
-        console.log(selects);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [name]);
 
   return (
     <div className="container-fluid selected ">
